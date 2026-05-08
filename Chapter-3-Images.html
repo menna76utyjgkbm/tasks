@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chapter 3 - Images & Box Model</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        h2 {
+            color: darkgreen;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid black;
+        }
+
+        .inline-example span {
+            background-color: yellow;
+        }
+
+        .block-example div {
+            background-color: lightblue;
+            margin: 5px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Page Title -->
+    <h1>Chapter 3: Images & Box Model</h1>
+
+    <!-- IMAGE SECTION -->
+    <h2>Images</h2>
+
+    <!-- Simple image -->
+    <img src="pizza.jpg" alt="Pizza image">
+
+    <!-- Figure example -->
+    <figure>
+        <img src="pizza.jpg" alt="Pizza">
+        <figcaption>Delicious homemade pizza</figcaption>
+    </figure>
+
+    <!-- BOX MODEL SECTION -->
+    <h2>Box Model</h2>
+
+    <div class="box">
+        This box shows padding, margin, and border.
+    </div>
+
+    <!-- INLINE vs BLOCK -->
+    <h2>Inline Elements</h2>
+
+    <p class="inline-example">
+        This is <span>inline</span> text inside a paragraph.
+    </p>
+
+    <h2>Block Elements</h2>
+
+    <div class="block-example">
+        <div>Block item 1</div>
+        <div>Block item 2</div>
+    </div>
+
+</body>
+
+</html>

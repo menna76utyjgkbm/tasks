@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Petrol Calculator</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #111, #333);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .box {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+        }
+
+        input:focus {
+            outline: 2px solid #00ffcc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #00ffcc;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #00c9a3;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <!-- Title -->
+        <h2>Petrol Calculator</h2>
+
+        <!-- Input for price per litre -->
+        <input id="price" type="number" value="1.72" placeholder="Price per litre">
+
+        <!-- Input for litres -->
+        <input id="litres" type="number" value="0" placeholder="Litres purchased">
+
+        <!-- Button -->
+        <button onclick="calculate()">Calculate</button>
+
+        <!-- Result display -->
+        <p id="result">Total: £0.00</p>
+
+    </div>
+
+    <script>
+
+        // Calculates total petrol cost
+        function calculate() {
+
+            // Get values from inputs
+            let price = document.getElementById("price").value;
+            let litres = document.getElementById("litres").value;
+
+            // Calculate total
+            let total = price * litres;
+
+            // Display result
+            document.getElementById("result").innerText =
+                "Total: £" + total.toFixed(2);
+        }
+
+    </script>
+
+</body>
+
+</html>
